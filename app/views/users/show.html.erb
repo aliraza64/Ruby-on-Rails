@@ -1,0 +1,14 @@
+<h1 align="center">Welcome to <%= @user.username %>'s page</h1>
+<div class="row1">
+ <div class="col-md-4 col-md-offset-5 center">
+  <%= gravatar_for @user, size: 150 %>
+ </div>
+</div>
+<div class="row1">
+ <div class="col-xs-10 col-xs-offset-1">
+ 	<h4 align="center"><%= @user.username %>'s articles</h4>
+ </div>
+</div>
+<%= render 'shared/article', obj: @user.articles %>
+<div align="center">
+</div>
